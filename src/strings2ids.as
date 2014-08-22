@@ -49,7 +49,6 @@ package
 			sp = new Sprite();
 			test = new TextField();
 			test.defaultTextFormat = (new TextFormat("",18,0x708360));
-			test.text = "请将res文件夹拖入此处";
 			test.width = 800;
 			test.height = 520;
 			test.wordWrap = true;
@@ -77,9 +76,7 @@ package
 			clearBtn.addEventListener(MouseEvent.CLICK,onClearClick);
 			this.addChild(clearBtn);
 			
-			
-			updateStatus();
-			
+			onClearClick(null);
 			
 		}
 		
@@ -123,7 +120,7 @@ package
 		}
 		private function onClearClick(ev:MouseEvent):void{
 			
-			test.text =  "请将res文件夹拖入此处";
+			test.text =  "";
 			
 			while( motherFileAry.length ) motherFileAry.pop();
 			while( sonFileAry.length ) sonFileAry.pop();
@@ -134,6 +131,7 @@ package
 			updateStatus();
 			this.beginBtn.mouseEnabled = false;
 		}
+		
 		
 		
 		
