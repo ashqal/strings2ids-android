@@ -235,6 +235,11 @@ package
 					this.beginBtn.mouseEnabled = true;
 					updateStatus();
 				}
+				else
+				{
+					onClearClick(null);
+					test.appendText("\n\n错误，找不到res/values/strings文件，无法继续");
+				}
 				
 				//trace(motherFileAry,outPath);//(file.name.length - 4))));
 			}
